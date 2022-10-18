@@ -1,0 +1,99 @@
+<html>
+    <head>
+    <title>Embedded_styling_task</title>
+    <style type="text/css">
+        th
+        {
+            background-color: green;
+        }
+        .row1
+        {
+            background-color: green;
+        }
+        .row2
+        {
+            background-color: red;
+        }
+        .row3
+        {
+            background-color: blue;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <table border="1">
+                <thead>
+                    Hobbi
+                </thead>
+                <tbody>
+                    <th>No</th>
+                    <th>Nama Hobbi</th>
+                    <th>sesering apa dilakukan</th>
+                    <tr class="row1"><td>1</td>
+                        <td>Main Game</td>
+                        <td>Sering Sekali</td>
+                    </tr>
+                    <tr><td>2</td>
+                        <td>Main Game lagi</td>
+                        <td>Sering Sekali</td>
+                    </tr>
+                    <tr><td>3</td>
+                        <td>Main Game Lagi dan lagi </td>
+                        <td>Sangat Sering Sekali</td>
+                    </tr>
+                </tbody>
+            </table>
+<br><br>
+            <table border="1">
+                <thead>
+                    Film Favorit
+                </thead>
+                <tbody>
+                    <th>No</th>
+                    <th>Nama Film</th>
+                    <th>Rate</th>
+                    <tr><td>1</td>
+                        <td>Interstellar</td>
+                        <td>10/10</td>
+                    </tr>
+                    <tr  class="row2"><td>2</td>
+                        <td>Ngeri-ngeri Sedap</td>
+                        <td>9.5/10</td>
+                    </tr>
+                    <tr><td>3</td>
+                        <td>Captain America : winter soldier</td>
+                        <td>8/10</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <table border="1">
+                <thead>
+                    Lagu Favorit
+                </thead>
+                <tbody>
+                    <th>No</th>
+                    <th>Nama Lagu</th>
+                    <th>Rate</th>
+
+                    <tr><td>1</td>
+                        <td>There Is a Light Never Goes Out</td>
+                        <td>10/10</td>
+                    </tr>
+                    
+                    <tr ><td>2</td>
+                        <td>Stayin Alive</td>
+                        <td>10/10</td>
+                    </tr>
+
+                    <tr class="row3">
+                        <td>3</td>
+                        <td>Koepoe Koepoe Liarku</td>
+                        <td>9/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
