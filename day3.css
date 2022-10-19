@@ -1,0 +1,42 @@
+body{
+
+  background-color: yellow;
+  color: black;
+}
+.grid {
+display: grid;
+grid-template-columns: auto auto auto;
+}
+.grid > div {
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+text-align: center;
+height: 500px;
+width: 300px;
+margin-left: 50px;
+margin-right: 50px;
+}
+div:hover{
+background-color: rgb(206, 206, 90);
+}
+div:nth-child( -n + 3) {
+margin-top: 0px;
+
+}
+div:nth-child( n + 7) {
+margin-bottom: 0px;
+}
+div:nth-child( n + 4):nth-child(-n + 6){
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+h1{
+text-align: center;
+}
+img{
+
+height: 300px;
+width: 200px;
+}
