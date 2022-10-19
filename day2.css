@@ -1,0 +1,31 @@
+h1 , p , h3{
+  text-align: center;
+}
+img{
+    width: 150px;
+    height: 200px;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(245, 106, 106);
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  .row {margin: 0 -20px;}
+  
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
