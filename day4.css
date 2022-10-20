@@ -42,7 +42,7 @@ width: 200px;
 }
 sticky-header {
   width:100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   margin: 0;
