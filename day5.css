@@ -25,10 +25,7 @@
     width: 100%;
   }
 
-  .sticky + .container {
-    padding-top: 102px;}
-
-    
+  
 
   .container {
     height: 250px;
