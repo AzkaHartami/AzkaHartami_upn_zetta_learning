@@ -1,24 +1,23 @@
-function priceCalculator(book, discount, tax, stock, order)
-{
-  let result = 0;
-  for (let loopIndex = 0; loopIndex < order; loopIndex++)
-  {
-    if (book && book.price && (loopIndex < stock))
-    {
-      const price = book.price;
-      const totalDiscount = price * (discount/100);
-      const priceAfterDiscount = price - totalDiscount;
-      const totalTax = priceAfterDiscount * (tax/100);
-      const priceAfterTax = priceAfterDiscount + totalTax;
-      result += priceAfterTax;
-    }
-    else
-    {
-      console.log("stock habis");
-      break;
-    }
-  }
-  return result;
-}
+const books = 
+[
+ {
+    nama  : 'azka',
+    judul : 'buku keren',
+    harga : 350000,
+ },
+    
+ {
+    nama  : 'hartami',
+    judul : 'buku hebat',
+    harga : 150000,
+ },
 
-console.log(priceCalculator({title: 'azka keren', price : 10000, printing_status: true}, 40, 10, 4, 4))
+ {
+    nama  : 'azkahart',
+    judul : 'buku kuat',
+    harga : 250000,
+ },
+];
+
+const result = books.group(({ judul }) => type);
+console.log(result.azka);
