@@ -1,22 +1,22 @@
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-  const diskon = 30/100;
-  const pajak = 10/100;
-  let selamat = "selamat anda mendapatkan diskon 30%";
-  const minimalbuku = 50000;
-  
-  readline.question('Harga buku : ', harga => {
-    Boolean (harga >= minimalbuku);
-    console.log(selamat);
-    console.log(`diskon 30% : ${harga * diskon}`);
-    var hargadiskon = harga * diskon;
-    console.log(`Harga setelah diskon : ${harga - hargadiskon}`);
-    var hargadiskon = harga - hargadiskon;
-    console.log(`Pajak 10% : ${hargadiskon * pajak}`);
-    var hargapajak = hargadiskon * pajak;
-    console.log(`Harga setelah pajak : ${hargadiskon + hargapajak}`);
-  
-    readline.close();
-  });
+const book = ({title : 'azka keren', price : 100000});
+
+function purchase (book, discount, tax)
+{
+
+    const price = book.price;
+    const totalDiscount = price * (discount/100);
+    const priceAfterDiscount = price - totalDiscount;
+    const totalTax = priceAfterDiscount * (tax/100);
+    const priceAfterTax = priceAfterDiscount + totalTax;
+ 
+
+  console.group();
+    console.log('Harga Awal', price);
+    console.log('Pengurangan Diskon', totalDiscount);
+    console.log('Harga Setelah diskon', priceAfterDiscount);
+    console.log('Pajak', totalTax);
+    console.log('Harga setelah Pajak', priceAfterTax);
+  console.groupEnd();
+}
+
+purchase(book, 40, 10)
