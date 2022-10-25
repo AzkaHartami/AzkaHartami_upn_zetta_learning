@@ -1,3 +1,5 @@
+const book = ({title: 'azka keren', price : 10000, printing_status: true});
+
 function priceCalculator(book, discount, tax, stock, order)
 {
   let result = 0;
@@ -21,4 +23,4 @@ function priceCalculator(book, discount, tax, stock, order)
   return result;
 }
 
-console.log(priceCalculator({title: 'azka keren', price : 10000, printing_status: true}, 40, 10, 4, 4))
+console.log(priceCalculator(book, 40, 10, 4, 4))
