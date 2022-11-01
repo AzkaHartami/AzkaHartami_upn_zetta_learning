@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'kasir',
+    path:'card',
     pathMatch:'full',
     loadChildren:()=>import('./card/card.module').then(mod=>mod.CardModule),
   }
