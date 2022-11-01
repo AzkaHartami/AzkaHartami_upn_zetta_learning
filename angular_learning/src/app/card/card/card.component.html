@@ -1,0 +1,12 @@
+<h1 style="text-align: center;"> {{judul}} </h1>
+  <div class="container">
+    <ul>
+      <div class="card">
+          <li *ngFor="let game of games">
+            <div>
+              <h3>{{ game.title }}</h3> <br><br><br><br><br><br><br><br> <p>Date Release {{ game.date }}</p>
+            </div>
+          </li>
+    </div>
+    </ul>
+  </div>
