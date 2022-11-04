@@ -1,0 +1,31 @@
+ul{
+    text-align: center;
+    list-style-type:none;
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid;
+    
+}
+
+li{
+    width: 250px;
+    height: 100px;
+    border: 1px solid;
+    background-color: rgb(194, 190, 186);
+    margin: 10px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+li:hover{
+    background-color: rgba(255, 251, 251,0.7);
+    scale: 1.1;
+    
+}
