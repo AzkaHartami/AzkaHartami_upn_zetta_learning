@@ -1,16 +1,22 @@
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChange, AfterContentChecked} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, AfterContentChecked, ViewChild, ElementRef} from '@angular/core';
 import { selecteditem } from '../kasir/kasir.component';
 
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.scss']
+  styleUrls: ['./payment.component.scss'],
+  styles : ['[bgAqua]{  Background-color: green;}',],
 })
 export class PaymentComponent implements OnInit, AfterContentChecked {
+  @ViewChild('bgAqua') bgAqua?:ElementRef;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.bgAqua?.nativeElement.setAttribute('bgAqua', '');
   }
 
   @Input() items!: selecteditem[];
@@ -25,7 +31,6 @@ export class PaymentComponent implements OnInit, AfterContentChecked {
 
   removeItem(itemToBeRemoved:selecteditem){
     const itemIndex = this.items.findIndex(({id}) => id ===itemToBeRemoved.id)
-    const itemRef = this.items[itemIndex]
     if(this.items[itemIndex].amount>1){
       this.items[itemIndex].amount-=1
     }
