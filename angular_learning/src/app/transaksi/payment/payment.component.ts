@@ -5,10 +5,10 @@ import { selecteditem } from '../kasir/kasir.component';
   selector: 'app-payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.scss'],
-  styles : ['[bgAqua]{  Background-color: green;}',],
+  styles : ['[bgbos]{  Background-color: pink;}',],
 })
 export class PaymentComponent implements OnInit, AfterContentChecked {
-  @ViewChild('bgAqua') bgAqua?:ElementRef;
+  @ViewChild('bgbos') bgbos?:ElementRef;
 
   constructor() { }
 
@@ -16,7 +16,7 @@ export class PaymentComponent implements OnInit, AfterContentChecked {
   }
 
   ngAfterViewInit(): void {
-    this.bgAqua?.nativeElement.setAttribute('bgAqua', '');
+    this.bgbos?.nativeElement.setAttribute('bgbos', '');
   }
 
   @Input() items!: selecteditem[];
