@@ -1,0 +1,30 @@
+<h1>Pembayaran</h1>
+<table border="0px" align="center">
+    <thead>
+        <tr>
+            <th>Jumlah Barang</th>
+            <th>Harga</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of (games | async)">
+            <td>
+                {{game.jumlah}} x {{game.title}}
+            </td>
+            <td>
+                Rp. {{ game.harga }} 
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                Total
+            </th>
+            <td>
+                Rp. {{total | async | currency : 'IDR' : 'symbol-narrow' : '2.2'}}
+            </td>
+        </tr>
+        <button class="btn" #Bayar>Checkout</button>
+    </tfoot>
+</table>

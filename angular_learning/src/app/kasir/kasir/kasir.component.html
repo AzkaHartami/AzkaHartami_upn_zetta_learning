@@ -1,0 +1,16 @@
+<h1> {{judul}} </h1>
+  <div class="container">
+    <ul>
+      <div class="card">
+          <li *ngFor="let game of (games | async)">
+            <div>
+              <h3>{{ game.title }}</h3> <br><br> <p>Rp. {{ game.harga }}</p>
+              <button (click)="addGame(game) ">Buy</button>
+            </div>
+          </li>
+    </div>
+    </ul>
+  </div>
+  <div class="container">
+      <app-bayar ></app-bayar>
+    </div>
