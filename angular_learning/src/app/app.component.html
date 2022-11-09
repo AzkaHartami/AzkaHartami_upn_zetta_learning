@@ -5,7 +5,8 @@
     <button (click)="InputNama(Nama.value)">Input</button>
     <h3> Welcome <br> {{Nama.value}}</h3>
     <br>
-    <button (click)="tampilGame()">Show Item</button>
+    <button [routerLink]="['..','kasir']" (click)="tampil()">Show Item</button>
+    <button [routerLink]="['..','admin']" (click)="tampil()">Show Admin</button>
 </div>
 
 <div>

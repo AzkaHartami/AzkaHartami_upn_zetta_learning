@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void { 
     console.log('app ngOnInit loaded')
   }
-  tampilGame(){
+  tampil(): void{
     this.isChild = !this.isChild
   }
 }

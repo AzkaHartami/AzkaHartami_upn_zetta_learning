@@ -4,9 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path:'kasir',
-    pathMatch:'full',
     loadChildren:()=>import('./kasir/kasir.module').then(mod=>mod.KasirModule),
-  }
+  },
+  {
+    path :'admin',
+    loadChildren:()=>import('./admin/admin.module').then(mod=> mod.AdminModule),
+  },
 ];
 
 @NgModule({
