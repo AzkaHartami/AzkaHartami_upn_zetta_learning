@@ -1,0 +1,20 @@
+<h1>Daftar Admin</h1>
+    <table align="center" border="0">
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Nama </th>
+                <th> Posisi </th>
+                <th> Ketersediaan </th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let admin of (admins | async)">
+            <tr>
+                <td> {{admin.id}} </td>
+                <td> {{admin.nama}} </td>
+                <td> {{admin.posisi}} </td>
+                <td> {{admin.kehadiran}} </td>
+                <td> <a [routerLink]="['..','detail' ,admin.id]"  >  {{admin.action}}</a>  </td>
+            </tr>
+        </tbody>
+    </table>
