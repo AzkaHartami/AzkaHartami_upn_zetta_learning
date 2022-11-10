@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-content>
+        <button mat-raised-button color="warn" [routerLink]="['list']">Back</button>
+        <ul>
+            <li>
+                <mat-icon>account_circle</mat-icon>
+            </li>
+            <li class="str">
+                <h1>{{list?.name | uppercase}}</h1>
+            </li>
+            <li>
+                <h2>-{{list?.position | uppercase}}-</h2>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>{{list?.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>:</td>
+                        <td>{{list?.age}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>:</td>
+                        <td>{{list?.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td>Marital Status</td>
+                        <td>:</td>
+                        <td>{{list?.marital}}</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

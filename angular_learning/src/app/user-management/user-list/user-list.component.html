@@ -1,0 +1,29 @@
+<h1>List User</h1>
+<hr />
+<div class="addUser">
+    <button mat-raised-button class="btn-add" [routerLink]="['..','create' ]">Add User</button>
+</div>
+<ng-template *ngIf="(list| async)!.length>0 ; else kosong"></ng-template>
+<div class="container">
+    <mat-card *ngFor="let list of (list| async)">
+        <mat-card-content>
+            <mat-icon>account_circle</mat-icon>
+            <h2>{{list.name}}</h2>
+            <span>{{list.position}}</span>
+            <table>
+                <tr>
+                    <td>
+                        <a [routerLink]="['..','detail',list.id]" id="dtl">Detail</a>
+                    </td>
+                    <td>
+                        <a [routerLink]="['..','edit' ,list.id]" id="ubah">Ubah</a>
+                    </td>
+                </tr>
+            </table>
+        </mat-card-content>
+    </mat-card>
+</div>
+<ng-template #kosong>
+    <h3>--No User yet--</h3>
+</ng-template>
+<hr />
